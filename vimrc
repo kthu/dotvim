@@ -140,7 +140,7 @@ version 7.3
  set   tabstop=3
 
 "      funky statusline with included git branch info
- set   statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set   statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 if &t_Co >= 256 || has("gui_running")
   colorscheme mustang
@@ -357,5 +357,5 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
 
-" call pathogen#infect() 
+call pathogen#infect() 
 
