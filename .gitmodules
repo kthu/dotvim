@@ -7,3 +7,6 @@
 [submodule "bundle/cup"]
 	path = bundle/cup
 	url = https://github.com/vim-scripts/cup.vim.git
+[submodule "bundle/vim-javacomplete"]
+	path = bundle/vim-javacomplete
+	url = https://github.com/gigelu/vim-javacomplete.git
