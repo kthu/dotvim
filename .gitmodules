@@ -22,3 +22,6 @@
 [submodule "bundle/fuzzyfinder"]
 	path = bundle/fuzzyfinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git
