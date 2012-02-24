@@ -4,7 +4,7 @@ version 7.3
  set   nocompatible
 
 "      background:  Are we using a "light" or "dark" background?
- set   background=light
+ set   background=dark
 
 "      autoindent:  "on" as I usually write code.
  set   autoindent
