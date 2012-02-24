@@ -124,6 +124,9 @@ version 7.3
 "      showmatch:   Show the matching bracket for the last ')'?
  set   showmatch
 
+"      showmatch:   Show the matching bracket for the last ')'?
+ set   showmatch
+
 "      showmode:    Show the current mode?  YEEEEEEEEESSSSSSSSSSS!
  set   showmode
 
@@ -142,6 +145,13 @@ version 7.3
 "      funky statusline with included git branch info
  set   statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+"      gnome-terminal hides the fact that it supports 256 colors.
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+
+"      mustang for 256 color terminals and gui vimѕ, tango for 8 color
+"      terminals
 if &t_Co >= 256 || has("gui_running")
   colorscheme mustang
 else
@@ -255,9 +265,6 @@ endif
 "
 " Define "del" char to be the same backspace (saves a LOT of trouble!)
 " As the angle notation cannot be use with the LeftHandSide
-" with mappings you must type this in *literally*!
-" map <C-V>127 <C-H>
-" cmap <C-V>127 <C-H>
 " the same for Linux Debian which uses 
 " imap <Esc>[3~ <C-H>
 " imap        <C-H>
