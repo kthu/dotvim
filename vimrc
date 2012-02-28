@@ -150,10 +150,10 @@ if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
-"      mustang for 256 color terminals and gui vimѕ, tango for 8 color
+"      vitamins for 256 color terminals and gui vimѕ, tango for 8 color
 "      terminals
 if &t_Co >= 256 || has("gui_running")
-  colorscheme mustang
+  colorscheme vitamins
 else
   colorscheme tango
 endif
