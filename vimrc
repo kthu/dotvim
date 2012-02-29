@@ -54,7 +54,7 @@ version 7.3
  set   smartcase
 
 "      scroll of a couple of lines
- set   scrolloff=5
+ set   scrolloff=1
 
 "      iskeyword:
 "      iskeyword=@,48-57,_,192-255 (default)
