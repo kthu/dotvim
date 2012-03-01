@@ -44,7 +44,7 @@ version 7.3
 "      hlsearch : highlight search - show the current search pattern This is
 "      a nice feature sometimes - but it sure can get in the way sometimes
 "      when you edit.
- set   hlsearch
+ set   nohlsearch
 
 "      incremental ѕearch
  set   incsearch
@@ -53,7 +53,7 @@ version 7.3
  set   ignorecase
  set   smartcase
 
-"      scroll of a couple of lines
+"      Don't scroll off. It's confusing
  set   scrolloff=0
 
 "      iskeyword:
@@ -69,9 +69,6 @@ version 7.3
 "      I like this as it makes reading texts easier (for me, at least).
  set   joinspaces
 "
-"      keywordprg:  Program to use for the "K" command.
-"set   keywordprg=man\ -s
-"
 "      laststatus:  show status line?  Yes, always!
 "      laststatus:  Even for only one buffer.
  set   laststatus=2
@@ -85,17 +82,11 @@ version 7.3
 "      modeline:    ...
 "      Allow the last line to be a modeline - useful when
 "      the last line in sig gives the preferred textwidth for replies.
- set   modeline
- set   modelines=1
+"set   modeline
+"set   modelines=1
 "
 "      number:      ...
  set   number
-"
-"      path:   The list of directories to search when you specify
-"              a file with an edit command.
-"              Note:  "~/.P" is a symlink to my dir with www pages
-"              "$VIM/syntax" is where the syntax files are.
-" set   path=.,,~/.P/vim,~/.P/vim/syntax,~/.P/vim/source,$VIM/syntax/
 "
 "      report: show a report when N lines were changed.
 "              report=0 thus means "show all changes"!
@@ -105,24 +96,20 @@ version 7.3
  set   ruler
 "
 "      Gimme some fish!
- let shell='fish'
+ let   shell='fish'
 
 "      shiftwidth:  Number of spaces to use for each
 "                   insertion of (auto)indent.
  set   shiftwidth=3
 
-"      expandtab:   Convert the tab to spaces
- set    expandtab
+"      tabstop
+ set   tabstop=3
 
-"      shortmess:   Kind of messages to show.   Abbreviate them all!  New
-"      since vim-5.0v: flag 'I' to suppress "intro message".
-"  set   shortmess=at
+"      expandtab:   Convert the tab to spaces
+ set   expandtab
 
 "      showcmd:     Show current uncompleted command?  Absolutely!
  set   showcmd
-
-"      showmatch:   Show the matching bracket for the last ')'?
- set   showmatch
 
 "      showmatch:   Show the matching bracket for the last ')'?
  set   showmatch
@@ -138,9 +125,6 @@ version 7.3
 "      startofline:  no:  do not jump to first character with page
 "      commands, ie keep the cursor in the current column.
  set   nostartofline
-
-"      tabstop
- set   tabstop=3
 
 "      funky statusline with included git branch info
  set   statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
@@ -163,27 +147,8 @@ if &t_Co > 2 || has("gui_running")
   syntax on
 endif
 
-"      textmode:    no - I am using Vim on UNIX!
- set   notextmode
-
-"      textwidth
-" set   textwidth=79
-
 "      title for xterm windows:
  set   title
-
-"      ttyfast:     are we using a fast terminal?
-"                   seting depends on where I use Vim...
- set   ttyfast
-
-"      ttybuiltin:
- set   nottybuiltin
-
-"      ttyscroll:      turn off scrolling -> faster!
- set   ttyscroll=1
-
-"      ttytype:
-" set   ttytype=xterm
 
 "      viminfo:  What info to store from an editing session
 "                in the viminfo file;  can be used at next session.
@@ -206,30 +171,23 @@ endif
  set   wildchar=<TAB>
 
 "      Dont't display invisible chars
- set nolist
+ set   nolist
 
 "      Enable virtualedit (lets me move cursor to spots without characters)
  set   virtualedit=all
 
-"    
-"      writebackup:
- set nowritebackup
-
 "      remove tool bar
- set guioptions-=T  
+ set   guioptions-=T  
 
 "      remove scroll bar
- set guioptions-=r  
+ set   guioptions-=r  
 
 "      remove menu bar
- set guifont=Monospace
+ set   guifont=Monospace
 
 " ===================================================================
 " ABbreviations
 " ===================================================================
-" 980701: Moved the abbreviations *before* the mappings as
-" some of the abbreviations get used with some mappings.
-"
  iab alos also
  iab aslo also
  iab charcter character
@@ -253,41 +211,15 @@ endif
 " toggle from "nopaste" to "paste" and back again:
  map <f3>   :set paste!<c-m>:set paste?<c-m>
 
-" Make "gf" rebound to last cursor position (line *and* column)
- noremap gf gf`"
-
 " ===================================================================
-"
-" General Editing
-"
-" Define "del" char to be the same backspace (saves a LOT of trouble!)
-" As the angle notation cannot be use with the LeftHandSide
-" the same for Linux Debian which uses 
-" imap <Esc>[3~ <C-H>
-" imap        <C-H>
-
-"     ;rcm = remove "control-m"s - for those mails sent from DOS:
- cmap ;rcm %s/<C-M>//g
-
-" ===================================================================
-" Inserting Dates and Times / Updating Date+Time Stamps
-" ===================================================================
-"    ,L  = "Last updated" - replace old time stamp with a new one
-"       preserving whitespace and using internal "strftime" command:
-"      requires the abbreviation  "YDATE"
- map ,L  1G/Last update:\s*/e+1<CR>CYDATE<ESC>
- map ,,L 1G/Last change:\s*/e+1<CR>CYDATE<ESC>
-" Example:
-" before:  "Last update:   Thu Apr  6 12:07:00 CET 1967"
-" after:   "Last update:   Tue Dec 16 12:07:00 CET 1997"
-"
-"    ,L  = "Last updated" - replace old time stamp with a new one
-"       using external "date" command (not good for all systems):
-" map ,L 1G/Last update: */e+1<CR>D:r!date<CR>kJ
 
 " ===================================================================
 " Useful stuff.  At least these are nice examples.  :-)
 " ===================================================================
+"
+"     ;rcm = remove "control-m"s - for those annoyng Windows files
+ vmap ,dos %s/<C-M>//g
+
 "     ,dr = decode/encode rot13 text
  vmap ,dr :!tr A-Za-z N-ZA-Mn-za-m
 
@@ -296,25 +228,7 @@ endif
 
  " HTML Tidy, http://tidy.sourceforge.net/
  "  " select xml text to format and hit ,x
- vmap ,x :%!tidy -q -i -asxml -f /dev/null<CR>
-
-" ===================================================================
-" Mapping of special keys - arrow keys and function keys.
-" ===================================================================
-" Buffer commands (split,move,delete) -
-" this makes a little more easy to deal with buffers.
- map <F4>  :split<C-M>
- map <F5>  :bp<C-M>
- map <F6>  :bn<C-M>
- map <F12> :bd<C-M>
-
-" Buffer commands (split,move,delete) -
-" for Mac keyboard (Performa 5200, US keyboard)
-"
- map <ESC>[19~ :split<C-M>
- map <ESC>[20~ :bp<C-M>
- map <ESC>[23~ :bn<C-M>
- map <ESC>[31~ :bd<C-M>
+ vmap ,tidy :%!tidy -q -i -asxml -f /dev/null<CR>
 
 " ===================================================================
 " AutoCommands
@@ -325,10 +239,7 @@ endif
    " The following sources the main syntax file,
    " ie. "$VIM/syntax/syntax.vim", see ":help :syn-on":
    syntax on
-   " Redefine the color for "Comment":
-"   hi! Comment  term=bold  ctermfg=cyan  guifg=Blue
  endif
-
 
 " From the GNOME coding style document.
  if !exists("autocommands_loaded")
@@ -346,22 +257,6 @@ augroup Mail
 augroup END
 
 filetype plugin indent on
-runtime! macros/matchit.vim
-
-augroup myfiletypes
- autocmd!
- autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
-augroup END
-
-" Omnicomplete settings
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
 
 call pathogen#infect() 
 

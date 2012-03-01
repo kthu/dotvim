@@ -28,3 +28,6 @@
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/juvenn/mustache.vim.git
+[submodule "bundle/matchit.vim"]
+	path = bundle/matchit.vim
+	url = https://github.com/tsaleh/vim-matchit.git
