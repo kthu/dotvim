@@ -54,7 +54,7 @@ version 7.3
  set   smartcase
 
 "      scroll of a couple of lines
- set   scrolloff=1
+ set   scrolloff=0
 
 "      iskeyword:
 "      iskeyword=@,48-57,_,192-255 (default)
@@ -205,13 +205,13 @@ endif
 "                default value is "<C-E>" but I prefer the tab key:
  set   wildchar=<TAB>
 
-"      wrapmargin:
-" set   wrapmargin=1
+"      Dont't display invisible chars
+ set nolist
 
-"      Turn of the annoying wrap
-" set   nowrap
+"      Enable virtualedit (lets me move cursor to spots without characters)
+ set   virtualedit=all
 
-"
+"    
 "      writebackup:
  set nowritebackup
 
@@ -220,9 +220,6 @@ endif
 
 "      remove scroll bar
  set guioptions-=r  
-
-"      remove menu bar
- set guioptions-=m  
 
 "      remove menu bar
  set guifont=Monospace
