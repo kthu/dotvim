@@ -227,6 +227,9 @@ endif
  " Find files using fuzzy finder
  nmap <leader>f :FufCoverageFile<c-m>
 
+ " Toggle the NERDTree
+ nmap <leader>t :NERDTreeToggle<c-m>
+
 " ===================================================================
 " Mappings for visual mode
 " ===================================================================
@@ -266,6 +269,13 @@ augroup Mail
  au FileType mail set tw=70 fo=tcrq
  au FileType mail set comments+=n:\|
 augroup END
+
+" Some NERDTree stuff
+" Open the NERDTree when vim starts if no files are given
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" If only the NERDTree is left when closing buffers, quit vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 filetype plugin indent on
 
