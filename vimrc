@@ -224,6 +224,9 @@ endif
 " Remove carriage return symbols. for those annoying Windows files
  nmap <leader>d :%s/\r//g<c-m>
 
+ " Find files using fuzzy finder
+ nmap <leader>f :FufCoverageFile<c-m>
+
 " ===================================================================
 " Mappings for visual mode
 " ===================================================================
