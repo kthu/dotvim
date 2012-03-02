@@ -206,19 +206,20 @@ endif
  iab YDATE <C-R>=strftime("%a %b %d %T %Z %Y")<CR>
 " Example: Tue Dec 16 12:07:00 CET 1997
 
+" ===================================================================
+" Mappings for normal mode
+" ===================================================================
 
-" 981210 Whenever I paste some text into VIM I have to
+" Whenever I paste some text into VIM I have to
 " toggle from "nopaste" to "paste" and back again:
- map <f3>   :set paste!<c-m>:set paste?<c-m>
+ nmap <C-a>p :set paste!<c-m>:set paste?<c-m>
+ 
+" Remove carriage return symbols. for those annoying Windows files
+ nmap <C-a>d :%s/\r//g<c-m>
 
 " ===================================================================
-
+" Mappings for visual mode
 " ===================================================================
-" Useful stuff.  At least these are nice examples.  :-)
-" ===================================================================
-"
-"     ;rcm = remove "control-m"s - for those annoyng Windows files
- vmap ,dos %s/<C-M>//g
 
 "     ,dr = decode/encode rot13 text
  vmap ,dr :!tr A-Za-z N-ZA-Mn-za-m
