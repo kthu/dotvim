@@ -206,30 +206,37 @@ endif
  iab YDATE <C-R>=strftime("%a %b %d %T %Z %Y")<CR>
 " Example: Tue Dec 16 12:07:00 CET 1997
 
+
+" ===================================================================
+" Mappings
+" ===================================================================
+
+ let mapleader = ","
+
 " ===================================================================
 " Mappings for normal mode
 " ===================================================================
 
 " Whenever I paste some text into VIM I have to
 " toggle from "nopaste" to "paste" and back again:
- nmap <C-a>p :set paste!<c-m>:set paste?<c-m>
+ nmap <leader>p :set paste!<c-m>:set paste?<c-m>
  
 " Remove carriage return symbols. for those annoying Windows files
- nmap <C-a>d :%s/\r//g<c-m>
+ nmap <leader>d :%s/\r//g<c-m>
 
 " ===================================================================
 " Mappings for visual mode
 " ===================================================================
 
 "     ,dr = decode/encode rot13 text
- vmap ,dr :!tr A-Za-z N-ZA-Mn-za-m
+ vmap <leader>dr :!tr A-Za-z N-ZA-Mn-za-m
 
 " Give the URL under the cursor to Netscape
- vmap ,net :!netscape -remote "openurl <C-R>""
+ vmap <leader>net :!netscape -remote "openurl <C-R>""
 
  " HTML Tidy, http://tidy.sourceforge.net/
- "  " select xml text to format and hit ,x
- vmap ,tidy :%!tidy -q -i -asxml -f /dev/null<CR>
+ "  " select xml text to format and type ,tidy
+ vmap <leader>tidy :%!tidy -q -i -asxml -f /dev/null<CR>
 
 " ===================================================================
 " AutoCommands
