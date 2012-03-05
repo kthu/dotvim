@@ -179,8 +179,11 @@ endif
 "      remove tool bar
  set   guioptions-=T  
 
-"      remove scroll bar
+"      remove right side scroll bar
  set   guioptions-=r  
+
+"      remove left side scroll bar
+ set   guioptions-=l  
 
 "      remove menu bar
  set   guifont=Monospace
