@@ -8,10 +8,12 @@ Lag symlink til ~ for .vimrc:
     cd ~
     ln -s .vim/vimrc .vimrc
 
-Initialiser plugin bundles som er installert som git submoduler:
+Installer vundle:
 
-    cd .vim
-    git submodule init
-    git submodule update
+    git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git
+
+Start vim og kjør
+
+    :BundleInstall
 
 Tada!

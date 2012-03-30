@@ -1,4 +1,34 @@
 version 7.3
+
+set nocompatible
+filetype off  " required!
+
+set rtp+=~/.vim/vundle.git/ 
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/cup.vim'
+Bundle 'gigelu/vim-javacomplete'
+Bundle 'mattn/zencoding-vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'juvenn/mustache.vim'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/fish.vim'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" non github repos
+"Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required!
       
 "      compatible:  Let Vim behave like Vi?  Hell, no!
  set   nocompatible
@@ -285,8 +315,4 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 " If only the NERDTree is left when closing buffers, quit vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-filetype plugin indent on
-
-call pathogen#infect() 
 
