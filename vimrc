@@ -1,5 +1,10 @@
 version 7.3
 
+"      vim does not like fish :(
+if $SHELL =~ 'bin/fish'
+    set shell=/bin/sh
+endif
+
 set nocompatible  "be IMproved
 source ~/.vim/bundles.vim 
 
