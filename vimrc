@@ -1,43 +1,7 @@
 version 7.3
 
-"      compatible:  Let Vim behave like Vi?  Hell, no!
-set nocompatible
-filetype off  " required!
-
-set rtp+=~/.vim/bundle/vundle/ 
-call vundle#rc()
-
-" let Vundle manage Vundle (required)
-Bundle 'gmarik/vundle'
-
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/cup.vim'
-Bundle 'gigelu/vim-javacomplete'
-Bundle 'mattn/zencoding-vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'juvenn/mustache.vim'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'vim-scripts/fish.vim'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'Arduino-syntax-file'
-" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
-"
-
-filetype plugin indent on 
-
- " Brief Vundle help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
- "
- " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
+set nocompatible  "be IMproved
+source ~/.vim/bundles.vim 
 
 "      background:  Are we using a "light" or "dark" background?
  set   background=dark

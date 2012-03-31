@@ -9,6 +9,6 @@ Lag symlink til ~ for .vimrc:
 Installer vundle og installer bundlene:
 
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    vim +BundleInstall +qall
+    vim -u ~/.vim/bundles.vim +BundleInstall +qall
 
 Tada!
