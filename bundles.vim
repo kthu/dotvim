@@ -19,6 +19,7 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/fish.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-surround'
 " Vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
