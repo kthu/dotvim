@@ -1,19 +1,14 @@
-Fiks ferdig vim oppsett. Installer ved å klone til ~ :
+Fiks ferdig vim oppsett. Installer ved å klone til ~/.vim :
    
-    cd ~
-    git clone git://github.com/kthu/dotvim.git .vim
+    git clone https://github.com/kthu/dotvim.git ~/.vim
 
 Lag symlink til ~ for .vimrc:
 
-    cd ~
-    ln -s .vim/vimrc .vimrc
+    ln -s ~/.vim/vimrc ~/.vimrc
 
-Installer vundle:
+Installer vundle og installer bundlene:
 
-    git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git
-
-Start vim og kjør
-
-    :BundleInstall
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    vim +BundleInstall +qall
 
 Tada!
