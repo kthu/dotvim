@@ -285,8 +285,6 @@ augroup Mail
 augroup END
 
 " Some NERDTree stuff
-" Open the NERDTree when vim starts if no files are given
-autocmd vimenter * if !argc() | NERDTree | endif
 
 " If only the NERDTree is left when closing buffers, quit vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
