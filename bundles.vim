@@ -20,6 +20,7 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/fish.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
+Bundle 'groenewege/vim-less'
 " Vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
