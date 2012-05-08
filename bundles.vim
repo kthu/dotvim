@@ -22,6 +22,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'plasticboy/vim-markdown'
 " Vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
