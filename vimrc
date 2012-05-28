@@ -201,10 +201,13 @@ endif
 "      remove menu bar
  set   guifont=Monospace
 
-" Local ctags only in project root
- set   tags=./tags
- let   g:easytags_dynamic_files = 2
-
+"      ctags  
+" let   g:easytags_dynamic_files = 1
+" let   g:easytags_by_filetype = '~/.vim/tags'
+" let   g:easytags_autorecurse = 1
+" let   g:easytags_include_members = 1
+ let   g:tagbar_autofocus = 1
+ let   g:tagbar_autoclose = 1
 
 " ===================================================================
 " ABbreviations
