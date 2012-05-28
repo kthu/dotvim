@@ -23,6 +23,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'majutsushi/tagbar'
 " Vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
