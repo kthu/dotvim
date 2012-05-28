@@ -201,6 +201,11 @@ endif
 "      remove menu bar
  set   guifont=Monospace
 
+" Local ctags only in project root
+ set   tags=./tags
+ let   g:easytags_dynamic_files = 2
+
+
 " ===================================================================
 " ABbreviations
 " ===================================================================
@@ -293,4 +298,5 @@ augroup END
 
 " If only the NERDTree is left when closing buffers, quit vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 
