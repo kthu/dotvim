@@ -1,5 +1,5 @@
 Fiks ferdig vim oppsett. Installer ved å klone til ~/.vim :
-   
+ 
     git clone https://github.com/kthu/dotvim.git ~/.vim
 
 Lag symlink til ~ for .vimrc:
