@@ -245,6 +245,9 @@ endif
 
  " Toggle the NERDTree
  nmap <leader>t :NERDTreeToggle<c-m>
+ 
+ " Toggle the Tagbar
+ nmap <leader>b :TagbarToggle<c-m>
 
 " ===================================================================
 " Mappings for visual mode
