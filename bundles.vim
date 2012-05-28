@@ -30,6 +30,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Arduino-syntax-file'
 Bundle 'gtk-mode'
+Bundle 'AutoTag'
 " Non github repos
 " Bundle 'git://git.wincent.com/command-t.git'
 "
