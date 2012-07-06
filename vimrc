@@ -144,7 +144,7 @@ endif
 "      vitamins for 256 color terminals and gui vimѕ, tango for 8 color
 "      terminals
 if &t_Co >= 256 || has("gui_running")
-  colorscheme vitamins
+  colorscheme molokai
 else
   colorscheme tango
 endif
@@ -177,9 +177,6 @@ endif
 "                default value is "<C-E>" but I prefer the tab key:
  set   wildchar=<TAB>
 
-"      Dont't display invisible chars
- set   nolist
-
 "      Enable virtualedit (lets me move cursor to spots without characters)
  set   virtualedit=all
 
@@ -200,6 +197,9 @@ endif
 
 "      remove menu bar
  set   guifont=Monospace
+
+"      show invisible chars
+ set   list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
 
 "      ctags  
 " let   g:easytags_dynamic_files = 1
