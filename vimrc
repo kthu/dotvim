@@ -201,6 +201,18 @@ endif
 "      show invisible chars
  set   list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
 
+"      Search for selected text, forwards or backwards
+ vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+ vnoremap <silent> # :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+
 "      ctags  
 " let   g:easytags_dynamic_files = 1
 " let   g:easytags_by_filetype = '~/.vim/tags'
