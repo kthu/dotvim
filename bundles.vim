@@ -24,7 +24,9 @@ Bundle 'groenewege/vim-less'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'majutsushi/tagbar'
+Bundle 'derekwyatt/vim-scala'
 " Bundle 'xolox/vim-easytags'
+
 " Vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
