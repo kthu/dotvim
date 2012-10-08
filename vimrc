@@ -103,6 +103,8 @@ set     report=0
 "       ruler:       show cursor position?  Yep!
 set     ruler
 "
+"       cursorline:  Highlight the current line
+set     cursorline
 
 "       shiftwidth:  Number of spaces to use for each
 "                    insertion of (auto)indent.
@@ -116,9 +118,6 @@ set     expandtab
 
 "       showcmd:     Show current uncompleted command?  Absolutely!
 set     showcmd
-
-"       showmatch:   Show the matching bracket for the last ')'?
-set     showmatch
 
 "       showmode:    Show the current mode?  YEEEEEEEEESSSSSSSSSSS!
 set     showmode
@@ -261,9 +260,6 @@ nmap    <leader>b :TagbarToggle<c-m>
 "       MAPPINGS FOR VISUAL MODE
 "       ,dr = decode/encode rot13 text
 vmap    <leader>dr :!tr A-Za-z N-ZA-Mn-za-m
-
-"       Give the URL under the cursor to Netscape
-vmap    <leader>net :!netscape -remote "openurl <C-R>""
 
 "       HTML Tidy, http://tidy.sourceforge.net/
 "       " select xml text to format and type ,tidy
