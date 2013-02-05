@@ -27,6 +27,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'majutsushi/tagbar'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'hallettj/jslint.vim'
 " Bundle 'xolox/vim-easytags'
 
 " Vim-scripts repos
