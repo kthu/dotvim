@@ -5,6 +5,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.fish set ft=fish
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
+autocmd! BufNewFile,BufRead *.js setlocal ft=javascript shiftwidth=4
 
 " Omnicomplete settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
