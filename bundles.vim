@@ -28,11 +28,11 @@ Bundle 'majutsushi/tagbar'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'hallettj/jslint.vim'
+Bundle 'kien/ctrlp.vim'
 " Bundle 'xolox/vim-easytags'
 
 " Vim-scripts repos
 Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle 'Arduino-syntax-file'
 Bundle 'gtk-mode'
 Bundle 'AutoTag'

@@ -248,9 +248,8 @@ nmap    <leader>p :set paste!<c-m>:set paste?<c-m>
 "       Remove carriage return symbols. for those annoying Windows files
 nmap    <leader>d :%s/\r//g<c-m>
 
-"       Find files using fuzzy finder
-nmap    <leader>f :FufCoverageFile<c-m>
-
+"       Find files using ctrlp
+nmap    <leader>f :CtrlP<c-m>
 "       Toggle the NERDTree
 nmap    <leader>t :NERDTreeToggle<c-m>
  
