@@ -61,6 +61,8 @@ set     incsearch
 set     ignorecase
 set     smartcase
 
+set     wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
 "       Don't scroll off. It's confusing
 set     scrolloff=0
 
@@ -191,7 +193,6 @@ set     guioptions-=l
 "       remove left side scroll bar when screen is split
 set     guioptions-=L  
 
-"       remove menu bar
 set     guifont=Monospace
 
 "       show invisible chars
@@ -236,7 +237,7 @@ iab     MYNAME Kjetil Thuen
 iab     YDATE <C-R>=strftime("%a %b %d %T %Z %Y")<CR>
 "       Example: Tue Dec 16 12:07:00 CET 1997
 
-
+let     b:jslint_disabled = 1
 "       MAPPINGS
 let     mapleader = ","
 
@@ -249,9 +250,14 @@ nmap    <leader>p :set paste!<c-m>:set paste?<c-m>
 nmap    <leader>d :%s/\r//g<c-m>
 
 "       Find files using ctrlp
-nmap    <leader>f :CtrlP<c-m>
+nmap    <leader>f :CtrlPMixed<c-m>
+let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$' }
+
 "       Toggle the NERDTree
 nmap    <leader>t :NERDTreeToggle<c-m>
+
+"       Toggle the NERDTree
+nmap    <leader>j :JSLintToggle<c-m>:JSLintUpdate<c-m>
  
 "       Toggle the Tagbar
 nmap    <leader>b :TagbarToggle<c-m>
