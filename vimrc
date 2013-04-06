@@ -144,7 +144,7 @@ endif
 "       vitamins for 256 color terminals and gui vimѕ, tango for 8 color
 "       terminals
 if      &t_Co >= 256 || has("gui_running")
-        colorscheme molokai
+        colorscheme zenburn
 else
         colorscheme tango
 endif
@@ -217,6 +217,7 @@ vnoremap <silent> # :<C-U>
 "let     g:easytags_include_members = 1
 let     g:tagbar_autofocus = 1
 let     g:tagbar_autoclose = 1
+
 
 "       ABBREVIATIONS
 iab     alos also
