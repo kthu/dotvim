@@ -17,4 +17,5 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
 
+autocmd FileType text,markdown set ts=4|set sw=4|set et|set si|set tw=80
 autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
