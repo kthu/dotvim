@@ -143,7 +143,9 @@ endif
 
 "       vitamins for 256 color terminals and gui vimѕ, tango for 8 color
 "       terminals
-if      &t_Co >= 256 || has("gui_running")
+if      has("gui_running")
+        colorscheme molokai
+elseif  &t_Co >= 256 
         colorscheme zenburn
 else
         colorscheme tango
@@ -298,3 +300,5 @@ augroup END
 
 "       If only the NERDTree is left when closing buffers, quit vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
