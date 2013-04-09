@@ -186,7 +186,7 @@ set     guioptions-=T
 "       remove right side scroll bar
 set     guioptions-=r  
 
- "      remove right side scroll bar when screen is split
+"       remove right side scroll bar when screen is split
 set     guioptions-=R  
 
 "       remove left side scroll bar
