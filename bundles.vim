@@ -27,11 +27,11 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'majutsushi/tagbar'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'derekwyatt/vim-scala'
-Bundle 'hallettj/jslint.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'godlygeek/tabular'
 " Bundle 'xolox/vim-easytags'
 
-" Vim-scripts repos
+" Vim-sc'ripts repos
 Bundle 'javacomplete'
 Bundle 'L9'
 Bundle 'Arduino-syntax-file'
