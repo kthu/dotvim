@@ -240,7 +240,6 @@ iab     MYNAME Kjetil Thuen
 iab     YDATE <C-R>=strftime("%a %b %d %T %Z %Y")<CR>
 "       Example: Tue Dec 16 12:07:00 CET 1997
 
-let     b:jslint_disabled = 1
 "       MAPPINGS
 let     mapleader = ","
 
@@ -259,9 +258,6 @@ let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.
 "       Toggle the NERDTree
 nmap    <leader>t :NERDTreeToggle<c-m>
 
-"       Toggle the NERDTree
-nmap    <leader>j :JSLintToggle<c-m>:JSLintUpdate<c-m>
- 
 "       Toggle the Tagbar
 nmap    <leader>b :TagbarToggle<c-m>
 
