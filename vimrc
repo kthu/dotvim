@@ -6,7 +6,7 @@ if      $SHELL =~ 'bin/fish'
 endif
 
 set     nocompatible  "be IMproved
-source  ~/.vim/bundles.vim 
+source  ~/.vim/bundles.vim
 
 
 set     encoding=utf-8
@@ -133,12 +133,9 @@ set     suffixes=.aux,.bak,.dvi,.gz,.idx,.log,.ps,.swp,.tar
 "       commands, ie keep the cursor in the current column.
 set     nostartofline
 
-"       funky statusline with included git branch info
-set     statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
-"       gnome-terminal hides the fact that it supports 256 colors.
-if      $COLORTERM == 'gnome-terminal'
-        set t_Co=256
+"      gnome-terminal hides the fact that it supports 256 colors.
+if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
+  set t_Co=256
 endif
 
 "       vitamins for 256 color terminals and gui vimѕ, tango for 8 color
