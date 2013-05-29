@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 
 " Original repos on github
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/cup.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'msanders/snipmate.vim'
@@ -29,6 +30,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
+"Bundle 'walm/jshint.vim'
 " Bundle 'xolox/vim-easytags'
 
 " Vim-sc'ripts repos
