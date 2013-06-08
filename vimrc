@@ -228,21 +228,24 @@ iab     EMAIL Kjetil.Thuen@gmail.com
 iab     MYNAME Kjetil Thuen
 
 "       Current date and time
-iab     YDATE <C-R>=strftime("%a %b %d %T %Z %Y")<CR>
+iab     YDATE <C-R>=strftime("%a %d %b %T %Y")<CR>
 "       Example: Tue Dec 16 12:07:00 CET 1997
 
 "       MAPPINGS
 let     mapleader = ","
 
 "       MAPPINGS FOR NORMAL MODE
-"       Whenever I paste some text into VIM I have to
-"       toggle from "nopaste" to "paste" and back again:
+
+"       <leader>p to  toggle paste
 nmap    <leader>p :set paste!<c-m>:set paste?<c-m>
 
-"       Remove carriage return symbols. for those annoying Windows files
+"       Disable paste when leavin insert mode
+au      InsertLeave * set nopaste
+
+"       <leader>d to remove carriage return symbols. for those annoying Windows files
 nmap    <leader>d :%s/\r//g<c-m>
 
-"       Find files using ctrlp
+"       <leader>f to find files using ctrlp
 nmap    <leader>f :CtrlPMixed<c-m>
 let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$' }
 
@@ -283,8 +286,11 @@ au      FileType mail set tw=70 fo=tcrq
 au      FileType mail set comments+=n:\|
 augroup END
 
-"       SOME NERDTREE STUFF
+"       Reselect visual block after in-/out-dent
+vnoremap < <gv
+vnoremap > >gv
 
+"       SOME NERDTREE STUFF
 "       If only the NERDTree is left when closing buffers, quit vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
