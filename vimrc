@@ -57,8 +57,9 @@ set     smartcase
 
 set     wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
-"       Don't scroll off. It's confusing
-set     scrolloff=0
+"       Scroll off. Helps overview
+set     scrolloff=4
+set     sidescrolloff=15
 
 "       iskeyword:
 "       iskeyword=@,48-57,_,192-255 (default)
@@ -93,8 +94,10 @@ set     report=0
 "       ruler:       show cursor position?  Yep!
 set     ruler
 "
-"       cursorline:  Highlight the current line
+"       cursorline:  Highlight the current line (in active window only)
 set     cursorline
+autocmd WinLeave * set nocursorline
+autocmd WinEnter * set cursorline
 
 "       shiftwidth:  Number of spaces to use for each
 "                    insertion of (auto)indent.
@@ -245,6 +248,9 @@ vnoremap > >gv
 
 "       Toggle search highlights
 noremap <space> :set hlsearch! hlsearch?<CR>
+           
+"       Toggle invisibles
+noremap <Leader>i :set list!<CR>
 
 "       Open alternate buffer
 noremap <Leader><Leader> <C-^>
@@ -277,5 +283,4 @@ let     g:tagbar_autoclose = 1
 "let     g:easytags_by_filetype = '~/.vim/tags'
 "let     g:easytags_autorecurse = 1
 "let     g:easytags_include_members = 1
-
 
