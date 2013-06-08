@@ -291,8 +291,12 @@ vnoremap > >gv
 "       Clear search highlights
 noremap <silent><Leader>/ :nohls<CR>
 
+"       Show diff in git commit window (requires tpope/vim.git)
+autocmd FileType gitcommit DiffGitCached | wincmd p
+
+
 "       SOME NERDTREE STUFF
 "       If only the NERDTree is left when closing buffers, quit vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
