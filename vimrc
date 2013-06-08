@@ -33,9 +33,6 @@ set     comments=b:#,:%,fb:-,n:>,n:)
 "       dictionary: english words first
 set     dictionary=/usr/share/dict/words
 
-"       digraph: required for those umlauts
-set     digraph
- 
 "       errorbells: damn this beep!  ;-)
 set     noerrorbells
 
@@ -160,6 +157,9 @@ set     title
 "                 in the viminfo file;  can be used at next session.
 set     viminfo=%,'50,\"100,:100,n~/.viminfo
 au      BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+"       automatically reload vimrc when it's saved
+au      BufWritePost .vimrc so ~/.vimrc
 
 set     visualbell
 
