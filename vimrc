@@ -45,7 +45,7 @@ set     formatoptions+=cqrt
 "       hidden:
 set     hidden
 
-"       hlsearch : highlight search - show the current search pattern 
+"       hlsearch : highlight search - show the current search pattern
 set     hlsearch
 
 "       incremental ѕearch
@@ -133,7 +133,7 @@ endif
 "       terminals
 if      has("gui_running")
         colorscheme molokai
-elseif  &t_Co >= 256 
+elseif  &t_Co >= 256
         colorscheme zenburn
 else
         colorscheme tango
@@ -172,19 +172,19 @@ set     wildchar=<TAB>
 set     virtualedit=all
 
 "       remove tool bar
-set     guioptions-=T  
+set     guioptions-=T
 
 "       remove right side scroll bar
-set     guioptions-=r  
+set     guioptions-=r
 
 "       remove right side scroll bar when screen is split
-set     guioptions-=R  
+set     guioptions-=R
 
 "       remove left side scroll bar
-set     guioptions-=l  
+set     guioptions-=l
 
 "       remove left side scroll bar when screen is split
-set     guioptions-=L  
+set     guioptions-=L
 
 set     guifont=Monospace
 
@@ -248,7 +248,7 @@ vnoremap > >gv
 
 "       Toggle search highlights
 noremap <space> :set hlsearch! hlsearch?<CR>
-           
+
 "       Toggle invisibles
 noremap <Leader>i :set list!<CR>
 
@@ -268,7 +268,8 @@ set     rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 "       <leader>f to find files using ctrlp
 nmap    <leader>f :CtrlPMixed<c-m>
-let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$' }
+let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(so|jar|class|swp|swo|log|o|pyc|jpe?g|png|gif|mo|po)$' }
+
 
 "       Toggle the NERDTree
 nmap    <leader>t :NERDTreeToggle<c-m>
