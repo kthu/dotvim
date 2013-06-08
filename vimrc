@@ -46,10 +46,8 @@ set     formatoptions+=cqrt
 "       hidden:
 set     hidden
 
-"       hlsearch : highlight search - show the current search pattern This is
-"       a nice feature sometimes - but it sure can get in the way sometimes
-"       when you edit.
-set     nohlsearch
+"       hlsearch : highlight search - show the current search pattern 
+set     hlsearch
 
 "       incremental ѕearch
 set     incsearch
@@ -289,6 +287,9 @@ augroup END
 "       Reselect visual block after in-/out-dent
 vnoremap < <gv
 vnoremap > >gv
+
+"       Clear search highlights
+noremap <silent><Leader>/ :nohls<CR>
 
 "       SOME NERDTREE STUFF
 "       If only the NERDTree is left when closing buffers, quit vim
