@@ -219,12 +219,6 @@ let     g:tagbar_autoclose = 1
 
 
 "       ABBREVIATIONS
-iab     alos also
-iab     aslo also
-iab     charcter character
-iab     charcters characters
-iab     exmaple example
-iab     shoudl should
 iab     seperate separate
 iab     teh the
 
