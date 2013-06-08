@@ -243,11 +243,12 @@ endif
 vnoremap < <gv
 vnoremap > >gv
 
-"       Clear search highlights
-noremap <silent><Leader>/ :nohls<CR>
+"       Toggle search highlights
+noremap <space> :set hlsearch! hlsearch?<CR>
 
 "       Open alternate buffer
 noremap <Leader><Leader> <C-^>
+
 
 "       SETTINGS THAT REQUIRE EXTENSIONS
 "       Show diff in git commit window (requires tpope/vim.git)
