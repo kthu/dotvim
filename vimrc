@@ -278,6 +278,13 @@ nmap    <leader>b :TagbarToggle<c-m>
 let     g:tagbar_autofocus = 1
 let     g:tagbar_autoclose = 1
 
+"       Disable arrow keys, like the cool kids are doing
+"       Forcing this shit into my muscle memory
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
 "       CTAGS
 "let     g:easytags_dynamic_files = 1
 "let     g:easytags_by_filetype = '~/.vim/tags'
