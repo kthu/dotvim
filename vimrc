@@ -80,14 +80,8 @@ set     laststatus=2
 "       lazyredraw:  do not update screen while executing macros
 set     lazyredraw
 "
-"       magic:       use some magic in search patterns?  Certainly!
+"       magic: use some magic in search patterns?  Certainly!
 set     magic
-"
-"       modeline:    ...
-"       Allow the last line to be a modeline - useful when
-"       the last line in sig gives the preferred textwidth for replies.
-"set    modeline
-"set    modelines=1
 "
 "       number:      ...
 set     number
@@ -206,15 +200,6 @@ vnoremap <silent> # :<C-U>
         \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
         \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-"       CTAGS
-"let     g:easytags_dynamic_files = 1
-"let     g:easytags_by_filetype = '~/.vim/tags'
-"let     g:easytags_autorecurse = 1
-"let     g:easytags_include_members = 1
-let     g:tagbar_autofocus = 1
-let     g:tagbar_autoclose = 1
-
-
 "       ABBREVIATIONS
 iab     seperate separate
 iab     teh the
@@ -228,10 +213,7 @@ iab     MYNAME Kjetil Thuen
 iab     YDATE <C-R>=strftime("%a %d %b %T %Y")<CR>
 "       Example: Tue Dec 16 12:07:00 CET 1997
 
-"       MAPPINGS
 let     mapleader = ","
-
-"       MAPPINGS FOR NORMAL MODE
 
 "       <leader>p to  toggle paste
 nmap    <leader>p :set paste!<c-m>:set paste?<c-m>
@@ -242,18 +224,7 @@ au      InsertLeave * set nopaste
 "       <leader>d to remove carriage return symbols. for those annoying Windows files
 nmap    <leader>d :%s/\r//g<c-m>
 
-"       <leader>f to find files using ctrlp
-nmap    <leader>f :CtrlPMixed<c-m>
-let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$' }
-
-"       Toggle the NERDTree
-nmap    <leader>t :NERDTreeToggle<c-m>
-
-"       Toggle the Tagbar
-nmap    <leader>b :TagbarToggle<c-m>
-
-"       MAPPINGS FOR VISUAL MODE
-"       ,dr = decode/encode rot13 text
+"       ,dr = decode/encode rot13 text in visual mode
 vmap    <leader>dr :!tr A-Za-z N-ZA-Mn-za-m
 
 "       HTML Tidy, http://tidy.sourceforge.net/
@@ -268,21 +239,6 @@ if      has("syntax")
         syntax on
 endif
 
-"       FROM THE GNOME CODING STYLE DOCUMENT.
-if      !exists("autocommands_loaded")
-        let autocommands_loaded = 1
-        augroup C
-        autocmd BufRead *.c set cindent
-        augroup END
-endif
-
-"       FOR MAIL MESSAGE WRITING
-augroup Mail
-au!
-au      FileType mail set tw=70 fo=tcrq
-au      FileType mail set comments+=n:\|
-augroup END
-
 "       Reselect visual block after in-/out-dent
 vnoremap < <gv
 vnoremap > >gv
@@ -290,12 +246,35 @@ vnoremap > >gv
 "       Clear search highlights
 noremap <silent><Leader>/ :nohls<CR>
 
+"       Open alternate buffer
+noremap <Leader><Leader> <C-^>
+
+"       SETTINGS THAT REQUIRE EXTENSIONS
 "       Show diff in git commit window (requires tpope/vim.git)
 autocmd FileType gitcommit DiffGitCached | wincmd p
 
-
-"       SOME NERDTREE STUFF
 "       If only the NERDTree is left when closing buffers, quit vim
 autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"       Enable powerline
+set     rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+"       <leader>f to find files using ctrlp
+nmap    <leader>f :CtrlPMixed<c-m>
+let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$' }
+
+"       Toggle the NERDTree
+nmap    <leader>t :NERDTreeToggle<c-m>
+
+"       Toggle the Tagbar
+nmap    <leader>b :TagbarToggle<c-m>
+let     g:tagbar_autofocus = 1
+let     g:tagbar_autoclose = 1
+
+"       CTAGS
+"let     g:easytags_dynamic_files = 1
+"let     g:easytags_by_filetype = '~/.vim/tags'
+"let     g:easytags_autorecurse = 1
+"let     g:easytags_include_members = 1
+
+
