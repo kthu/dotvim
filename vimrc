@@ -1,5 +1,4 @@
 version 7.3
-
 "       vim does not like fish :(
 if      $SHELL =~ 'bin/fish'
         set shell=/bin/sh
@@ -193,7 +192,7 @@ set     guioptions-=L
 set     guifont=Monospace
 
 "       show invisible chars
-set     list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
+set     list listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×
 
 "       Search for selected text, forwards or backwards
 vnoremap <silent> * :<C-U>
