@@ -86,6 +86,7 @@ set     magic
 "
 "       number:      ...
 set     number
+
 "
 "       report: show a report when N lines were changed.
 "               report=0 thus means "show all changes"!
@@ -139,6 +140,7 @@ else
         colorscheme tango
 endif
 
+
 "       switch syntax highlighting on, when the terminal has colors
 if      &t_Co > 2 || has("gui_running")
         syntax on
@@ -190,6 +192,7 @@ set     guifont=Monospace
 
 "       show invisible chars
 set     list listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×
+
 
 "       Search for selected text, forwards or backwards
 vnoremap <silent> * :<C-U>
@@ -292,3 +295,4 @@ nnoremap <right> <nop>
 "let     g:easytags_autorecurse = 1
 "let     g:easytags_include_members = 1
 
+highlight LineNr ctermfg=darkgrey guifg=#555555
