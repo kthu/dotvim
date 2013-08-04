@@ -30,6 +30,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
+Bundle 'mileszs/ack.vim'
 " Bundle 'xolox/vim-easytags'
 
 " Vim-sc'ripts repos
