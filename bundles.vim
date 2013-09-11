@@ -1,8 +1,8 @@
 let $GIT_SSL_NO_VERIFY = 'true'
 set nocompatible  "be IMproved
-filetype off  " required 
+filetype off  " required
 
-set rtp+=~/.vim/bundle/vundle/ 
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Let Vundle manage Vundle (required)
@@ -12,7 +12,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/cup.vim'
-Bundle 'mattn/emnet-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tsaleh/vim-matchit'
@@ -45,7 +45,7 @@ Bundle 'AutoTag'
 "
 
 filetype plugin indent on "required
- 
+
 " Brief Vundle help
 " :BundleList          - list configured bundles
 " :BundleInstall(!)    - install(update) bundles
