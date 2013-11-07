@@ -7,6 +7,7 @@ autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.js setlocal ft=javascript shiftwidth=4
 autocmd! BufNewFile,BufRead *.coffee setlocal ft=coffeescript shiftwidth=2
+autocmd! BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jslint']
 
 " Omnicomplete settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
