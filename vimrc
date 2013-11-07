@@ -260,8 +260,6 @@ noremap <Leader><Leader> <C-^>
 
 
 "       SETTINGS THAT REQUIRE EXTENSIONS
-"       Show diff in git commit window (requires tpope/vim.git)
-autocmd FileType gitcommit DiffGitCached | wincmd p
 
 "       If only the NERDTree is left when closing buffers, quit vim
 autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
