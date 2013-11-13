@@ -35,6 +35,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'guns/vim-clojure-static'
 Bundle 'amdt/vim-niji'
+Bundle 'Lokaltog/vim-easymotion'
 
 " Bundle 'xolox/vim-easytags'
 
