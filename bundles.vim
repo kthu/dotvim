@@ -34,7 +34,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'guns/vim-clojure-static'
-Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'amdt/vim-niji'
 
 " Bundle 'xolox/vim-easytags'
 
