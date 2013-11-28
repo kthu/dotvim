@@ -258,6 +258,9 @@ noremap <Leader>i :set list!<CR>
 "       Open alternate buffer
 noremap <Leader><Leader> <C-^>
 
+"       :w! (and :W) saves using sudo
+command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+cnoreabbrev w! W
 
 "       SETTINGS THAT REQUIRE EXTENSIONS
 
