@@ -135,7 +135,7 @@ endif
 if      has("gui_running")
         colorscheme molokai
 elseif  &t_Co >= 256
-        colorscheme zenburn
+        colorscheme molokai
 else
         colorscheme tango
 endif
