@@ -38,6 +38,7 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'amdt/vim-niji'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'guns/vim-sexp'
+Bundle 'dgrnbrg/vim-redl'
 
 " Bundle 'xolox/vim-easytags'
 
