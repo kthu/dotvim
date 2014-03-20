@@ -61,40 +61,26 @@ set     wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set     scrolloff=4
 set     sidescrolloff=15
 
-"       iskeyword:
-"       iskeyword=@,48-57,_,192-255 (default)
-
-"       Add the dash ('-'), the dot ('.'), and the '@' as "letters" to "words".
-"       This makes it possible to expand email addresses, eg
-"       guckes-www@vim.org
-set     iskeyword=@,48-57,_,192-255,-,.,@-@
-"
-"       joinspaces:
-"       insert two spaces after a period with every joining of lines.
-"       I like this as it makes reading texts easier (for me, at least).
-set     joinspaces
-
 "       laststatus:  show status line?  Yes, always!
 "       laststatus:  Even for only one buffer.
 set     laststatus=2
-"
+
 "       lazyredraw:  do not update screen while executing macros
 set     lazyredraw
-"
+
 "       magic: use some magic in search patterns?  Certainly!
 set     magic
-"
-"       number:      ...
+
+"       number:
 set     number
 
-"
 "       report: show a report when N lines were changed.
 "               report=0 thus means "show all changes"!
 set     report=0
-"
+
 "       ruler:       show cursor position?  Yep!
 set     ruler
-"
+
 "       cursorline:  Highlight the current line (in active window only)
 set     cursorline
 autocmd WinLeave * set nocursorline
@@ -139,7 +125,6 @@ elseif  &t_Co >= 256
 else
         colorscheme tango
 endif
-
 
 "       switch syntax highlighting on, when the terminal has colors
 if      &t_Co > 2 || has("gui_running")
@@ -209,6 +194,7 @@ vnoremap <silent> # :<C-U>
 "       ABBREVIATIONS
 iab     seperate separate
 iab     teh the
+iab     isntall install
 
 "       My address (Email)
 "       makes it easy to type them without typos  ;-)
@@ -274,7 +260,6 @@ set     rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 nmap    <leader>f :CtrlPMixed<c-m>
 let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(so|jar|class|swp|swo|log|o|pyc|jpe?g|png|gif|mo|po)$' }
 
-
 "       Toggle the NERDTree
 nmap    <leader>t :NERDTreeToggle<c-m>
 
@@ -289,11 +274,5 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-
-"       CTAGS
-"let     g:easytags_dynamic_files = 1
-"let     g:easytags_by_filetype = '~/.vim/tags'
-"let     g:easytags_autorecurse = 1
-"let     g:easytags_include_members = 1
 
 highlight LineNr ctermfg=darkgrey guifg=#555555
