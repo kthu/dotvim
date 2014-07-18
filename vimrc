@@ -268,6 +268,10 @@ nmap    <leader>b :TagbarToggle<c-m>
 let     g:tagbar_autofocus = 1
 let     g:tagbar_autoclose = 1
 
+"       Use easymotion for search
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
 "       Disable arrow keys, like the cool kids are doing
 "       Forcing this shit into my muscle memory
 nnoremap <up> <nop>
