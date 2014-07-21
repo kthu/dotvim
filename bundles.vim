@@ -9,6 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Original repos on github
+Bundle 'tpope/vim-sensible'
 Bundle 'Lokaltog/powerline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'amdt/vim-niji'
@@ -18,6 +19,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'godlygeek/tabular'
 Bundle 'groenewege/vim-less'
 Bundle 'guns/vim-clojure-static'
+Bundle 'guns/vim-clojure-highlight'
 Bundle 'guns/vim-sexp'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kchmck/vim-coffee-script'
@@ -26,8 +28,9 @@ Bundle 'majutsushi/tagbar'
 Bundle 'mattn/emmet-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-sleuth'
+Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 Bundle 'tpope/vim-classpath'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fireplace'
@@ -36,21 +39,18 @@ Bundle 'tpope/vim-leiningen'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-projectionist'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/cup.vim'
 Bundle 'vim-scripts/fish.vim'
 
-" Bundle 'xolox/vim-easytags'
-
-" Vim-sc'ripts repos
+" Vim-scripts repos
 Bundle 'javacomplete'
 Bundle 'L9'
 Bundle 'Arduino-syntax-file'
 Bundle 'gtk-mode'
 Bundle 'AutoTag'
 " Non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://git.wincent.com/command-t.git'
 "
 
 filetype plugin indent on "required

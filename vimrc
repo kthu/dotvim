@@ -1,20 +1,12 @@
 version 7.3
-"       vim does not like fish :(
-if      $SHELL =~ 'bin/fish'
-        set shell=/bin/sh
-endif
 
 set     nocompatible  "be IMproved
 source  ~/.vim/bundles.vim
-
 
 set     encoding=utf-8
 
 "       background:  Are we using a "light" or "dark" background?
 set     background=dark
-
-"       autoindent:  "on" as I usually write code.
-set     autoindent
 
 "       autowrite: Automatically save modifications to files
 "       when you use critical (rxternal) commands.
@@ -23,33 +15,12 @@ set     autowrite
 "       backup:  backups are for wimps  ;-)
 set     nobackup
 
-"       backspace:  '2' is much smarter. -> "help backspace"
-set     backspace=2
-
-"       comments default: sr:/*,mb:*,el:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-set     comments=b:#,:%,fb:-,n:>,n:)
-
 "       dictionary: english words first
 set     dictionary=/usr/share/dict/words
-
-"       errorbells: damn this beep!  ;-)
-set     noerrorbells
-
-"       esckeys: allow usage of cursor keys within insert mode
-set     esckeys
 
 "       formatoptions: Options for the "text format" command ("gq")
 "                      I need all those options (but 'o')!
 set     formatoptions+=cqrt
-
-"       hidden:
-set     hidden
-
-"       hlsearch : highlight search - show the current search pattern
-set     hlsearch
-
-"       incremental ѕearch
-set     incsearch
 
 "       smart case for searches
 set     ignorecase
@@ -60,10 +31,6 @@ set     wildignore+=*/tmp/*,*.so,*.swp,*.zip
 "       Scroll off. Helps overview
 set     scrolloff=4
 set     sidescrolloff=15
-
-"       laststatus:  show status line?  Yes, always!
-"       laststatus:  Even for only one buffer.
-set     laststatus=2
 
 "       lazyredraw:  do not update screen while executing macros
 set     lazyredraw
@@ -78,26 +45,10 @@ set     number
 "               report=0 thus means "show all changes"!
 set     report=0
 
-"       ruler:       show cursor position?  Yep!
-set     ruler
-
 "       cursorline:  Highlight the current line (in active window only)
 set     cursorline
 autocmd WinLeave * set nocursorline
 autocmd WinEnter * set cursorline
-
-"       shiftwidth:  Number of spaces to use for each
-"                    insertion of (auto)indent.
-set     shiftwidth=3
-
-"       tabstop
-set     tabstop=3
-
-"       expandtab:   Convert the tab to spaces
-set     expandtab
-
-"       showcmd:     Show current uncompleted command?  Absolutely!
-set     showcmd
 
 "       showmode:    Show the current mode?  YEEEEEEEEESSSSSSSSSSS!
 set     showmode
@@ -116,7 +67,7 @@ if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
   set t_Co=256
 endif
 
-"       vitamins for 256 color terminals and gui vimѕ, tango for 8 color
+"       molokai for 256 color terminals and gui vimѕ, tango for 8 color
 "       terminals
 if      has("gui_running")
         colorscheme molokai
@@ -174,22 +125,6 @@ set     guioptions-=l
 set     guioptions-=L
 
 set     guifont=Monospace
-
-"       show invisible chars
-set     list listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×
-
-
-"       Search for selected text, forwards or backwards
-vnoremap <silent> * :<C-U>
-        \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-        \gvy/<C-R><C-R>=substitute(
-        \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-        \gV:call setreg('"', old_reg, old_regtype)<CR>
-vnoremap <silent> # :<C-U>
-        \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-        \gvy?<C-R><C-R>=substitute(
-        \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-        \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 "       ABBREVIATIONS
 iab     seperate separate
@@ -249,19 +184,12 @@ command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 cnoreabbrev w! W
 
 "       SETTINGS THAT REQUIRE EXTENSIONS
-
-"       If only the NERDTree is left when closing buffers, quit vim
-autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 "       Enable powerline
 set     rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 "       <leader>f to find files using ctrlp
 nmap    <leader>f :CtrlPMixed<c-m>
 let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(so|jar|class|swp|swo|log|o|pyc|jpe?g|png|gif|mo|po)$' }
-
-"       Toggle the NERDTree
-nmap    <leader>t :NERDTreeToggle<c-m>
 
 "       Toggle the Tagbar
 nmap    <leader>b :TagbarToggle<c-m>
