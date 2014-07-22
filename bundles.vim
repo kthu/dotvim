@@ -40,6 +40,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-projectionist'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-vinegar'
 Bundle 'vim-scripts/cup.vim'
 Bundle 'vim-scripts/fish.vim'
 
