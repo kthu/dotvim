@@ -10,7 +10,8 @@ Bundle 'gmarik/vundle'
 
 " Original repos on github
 Bundle 'tpope/vim-sensible'
-Bundle 'Lokaltog/powerline'
+"Bundle 'Lokaltog/powerline'
+Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'amdt/vim-niji'
 Bundle 'derekwyatt/vim-scala'

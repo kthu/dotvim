@@ -183,10 +183,16 @@ noremap <Leader><Leader> <C-^>
 command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 cnoreabbrev w! W
 
-"       SETTINGS THAT REQUIRE EXTENSIONS
-"       Enable powerline
-set     rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"       Disable arrow keys, like the cool kids are doing
+"       Forcing this shit into my muscle memory
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 
+highlight LineNr ctermfg=darkgrey guifg=#555555
+
+"       SETTINGS THAT REQUIRE EXTENSIONS
 "       <leader>f to find files using ctrlp
 nmap    <leader>f :CtrlPMixed<c-m>
 let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(so|jar|class|swp|swo|log|o|pyc|jpe?g|png|gif|mo|po)$' }
@@ -200,11 +206,33 @@ let     g:tagbar_autoclose = 1
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
-"       Disable arrow keys, like the cool kids are doing
-"       Forcing this shit into my muscle memory
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
 
-highlight LineNr ctermfg=darkgrey guifg=#555555
+"        Airline setup
+if !exists('g:airline_symbols')
+ let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+let g:airline_theme = 'molokai'
