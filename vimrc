@@ -26,7 +26,7 @@ set     formatoptions+=cqrt
 set     ignorecase
 set     smartcase
 
-set     wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set     wildignore+=*/tmp/*,*/target/*,*/.git/*,*/.hg/*,*/.svn/*,*.so,*.swp,*.zip,*.jar,*.class,*.swo,*.o,*.pyc,*.jpg,*.jpeg,*.png,*.gif,*.mo,*.po
 
 "       Scroll off. Helps overview
 set     scrolloff=4
@@ -194,9 +194,13 @@ nnoremap <right> <nop>
 highlight LineNr ctermfg=darkgrey guifg=#555555
 
 "       SETTINGS THAT REQUIRE EXTENSIONS
-"       <leader>f to find files using ctrlp
-nmap    <leader>f :CtrlPMixed<c-m>
-let     g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(so|jar|class|swp|swo|log|o|pyc|jpe?g|png|gif|mo|po)$' }
+"       Find files and buffers
+nmap    <leader>ff :CtrlP<c-m>
+nmap    <leader>fb :CtrlPBuffer<c-m>
+let     g:ctrlp_custom_ignore = {'dir':  '\v[\/](target|resources|build|out)$', 'file': '\v\.(log)$'}
+let     g:ctrlp_working_path_mode = 'ra'
+let     g:ctrlp_mruf_include = 'vimrc'
+let     g:ctrlp_mruf_save_on_update = 0
 
 "       Toggle the Tagbar
 nmap    <leader>b :TagbarToggle<c-m>
