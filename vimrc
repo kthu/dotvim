@@ -138,8 +138,9 @@ iab     EMAIL Kjetil.Thuen@gmail.com
 iab     MYNAME Kjetil Thuen
 
 "       Current date and time
-iab     YDATE <C-R>=strftime("%a %d %b %T %Y")<CR>
-"       Example: Tue Dec 16 12:07:00 CET 1997
+iab     YDATE <C-R>=strftime("%a %d %b %Y %T")<CR>
+"       Example: Tue Dec 16 1997 12:07:00 CET 
+"
 
 let     mapleader = ","
 
@@ -180,9 +181,8 @@ noremap <Leader>i :set list!<CR>
 "       Open alternate buffer
 noremap <Leader><Leader> <C-^>
 
-"       :w! (and :W) saves using sudo
-command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
-cnoreabbrev w! W
+"       :w!! saves using sudo
+cmap 	w!! :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 "       Disable arrow keys, like the cool kids are doing
 "       Forcing this shit into my muscle memory
@@ -208,9 +208,9 @@ let     g:tagbar_autofocus = 1
 let     g:tagbar_autoclose = 1
 
 "       Use easymotion for search
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+map  	/ <Plug>(easymotion-sn)
+omap 	/ <Plug>(easymotion-tn)
 
 "       Use powerline font in Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
+let 	g:airline_powerline_fonts = 1
+let 	g:airline_theme = 'powerlineish'
