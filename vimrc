@@ -70,9 +70,9 @@ endif
 "       molokai for 256 color terminals and gui vimѕ, tango for 8 color
 "       terminals
 if      has("gui_running")
-        colorscheme molokai
+        colorscheme solarized
 elseif  &t_Co >= 256
-        colorscheme molokai
+        colorscheme solarized 
 else
         colorscheme tango
 endif
@@ -82,6 +82,8 @@ endif
 if      &t_Co > 2 || has("gui_running")
         syntax on
 endif
+
+"highlight LineNr ctermfg=darkgrey guifg=#555555
 
 "       title for xterm windows:
 set     title
@@ -191,7 +193,6 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
-highlight LineNr ctermfg=darkgrey guifg=#555555
 
 "       SETTINGS THAT REQUIRE EXTENSIONS
 "       Find files and buffers
