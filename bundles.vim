@@ -46,6 +46,14 @@ Bundle 'tpope/vim-vinegar'
 Bundle 'vim-scripts/cup.vim'
 Bundle 'vim-scripts/fish.vim'
 
+" Color schemes
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'sickill/vim-monokai'
+Bundle 'tango'
+Bundle 'jnurmine/Zenburn'
+Bundle 'fmoralesc/vim-vitamins'
+Bundle 'croaker/mustang-vim'
+
 " Vim-scripts repos
 Bundle 'javacomplete'
 Bundle 'L9'
