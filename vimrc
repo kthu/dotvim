@@ -64,19 +64,10 @@ set     nostartofline
 
 "      gnome-terminal hides the fact that it supports 256 colors.
 if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
-  set t_Co=256
+   set t_Co=256
 endif
 
-"       molokai for 256 color terminals and gui vimѕ, tango for 8 color
-"       terminals
-if      has("gui_running")
-        colorscheme solarized
-elseif  &t_Co >= 256
-        colorscheme solarized 
-else
-        colorscheme tango
-endif
-
+colorscheme solarized
 
 "       switch syntax highlighting on, when the terminal has colors
 if      &t_Co > 2 || has("gui_running")
@@ -141,7 +132,7 @@ iab     MYNAME Kjetil Thuen
 
 "       Current date and time
 iab     YDATE <C-R>=strftime("%a %d %b %Y %T")<CR>
-"       Example: Tue Dec 16 1997 12:07:00 CET 
+"       Example: Tue Dec 16 1997 12:07:00 CET
 "
 
 let     mapleader = ","
