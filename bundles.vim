@@ -49,7 +49,6 @@ Bundle 'vim-scripts/fish.vim'
 " Color schemes
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'sickill/vim-monokai'
-Bundle 'tango'
 Bundle 'jnurmine/Zenburn'
 Bundle 'fmoralesc/vim-vitamins'
 Bundle 'croaker/mustang-vim'
