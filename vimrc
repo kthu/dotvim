@@ -205,4 +205,4 @@ omap 	/ <Plug>(easymotion-tn)
 
 "       Use powerline font in Airline
 let 	g:airline_powerline_fonts = 1
-let 	g:airline_theme = 'powerlineish'
+let 	g:airline_theme = 'solarized'
