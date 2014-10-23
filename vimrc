@@ -175,7 +175,7 @@ noremap <Leader>i :set list!<CR>
 noremap <Leader><Leader> <C-^>
 
 "       :w!! saves using sudo
-cmap 	w!! :execute ':silent w !sudo tee % > /dev/null' | :edit!
+" cmap 	w!! :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 "       Disable arrow keys, like the cool kids are doing
 "       Forcing this shit into my muscle memory
