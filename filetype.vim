@@ -6,7 +6,7 @@ autocmd BufNewFile,BufRead *.fish set ft=fish
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.js setlocal ft=javascript
-autocmd! BufNewFile,BufRead *.coffee setlocal ft=coffeescript
+autocmd! BufNewFile,BufRead *.coffee setlocal ft=coffee
 autocmd! BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jslint']
 
 " Omnicomplete settings
