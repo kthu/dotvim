@@ -46,6 +46,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-vinegar'
 Bundle 'vim-scripts/cup.vim'
 Bundle 'vim-scripts/fish.vim'
+Bundle 'jplaut/vim-arduino-ino' 
 
 " Color schemes
 Bundle 'altercation/vim-colors-solarized'
