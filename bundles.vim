@@ -10,7 +10,6 @@ Bundle 'gmarik/vundle'
 
 " Original repos on github
 Bundle 'tpope/vim-sensible'
-"Bundle 'Lokaltog/powerline'
 Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'amdt/vim-niji'
@@ -46,7 +45,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-vinegar'
 Bundle 'vim-scripts/cup.vim'
 Bundle 'vim-scripts/fish.vim'
-Bundle 'jplaut/vim-arduino-ino' 
+Bundle 'jplaut/vim-arduino-ino'
 
 " Color schemes
 Bundle 'altercation/vim-colors-solarized'
