@@ -74,8 +74,6 @@ if      &t_Co > 2 || has("gui_running")
         syntax on
 endif
 
-"highlight LineNr ctermfg=darkgrey guifg=#555555
-
 "       title for xterm windows:
 set     title
 
