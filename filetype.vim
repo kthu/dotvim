@@ -8,6 +8,7 @@ autocmd  BufNewFile,BufRead *.json set ft=javascript
 autocmd! BufNewFile,BufRead *.js setlocal ft=javascript
 autocmd! BufNewFile,BufRead *.coffee setlocal ft=coffee
 autocmd! BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jslint']
+autocmd  BufNewFile,BufRead *.html set filetype=html.handlebars syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 
 " Omnicomplete settings
 autocmd FileType python set omnifunc=pythoncomplete#Complete
