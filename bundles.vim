@@ -9,7 +9,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Original repos on github
-Bundle 'tpope/vim-sensible'
 Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'amdt/vim-niji'
@@ -30,6 +29,8 @@ Bundle 'mattn/emmet-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-sexp-mappings-for-regular-people'
 Bundle 'tpope/vim-classpath'

@@ -182,7 +182,6 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
-
 "       SETTINGS THAT REQUIRE EXTENSIONS
 "       Find files and buffers
 nmap    <leader>ff :CtrlP<c-m>

@@ -22,3 +22,6 @@ autocmd FileType java set omnifunc=javacomplete#Complete
 
 autocmd FileType text,markdown set et|set si|set tw=80
 autocmd FileType ruby,eruby,yaml set ai et
+
+" Remove trailing whitespace
+autocmd FileType c,cpp,java,php,coffee,clojure,clojurescript autocmd BufWritePre <buffer> :%s/\s\+$//e
