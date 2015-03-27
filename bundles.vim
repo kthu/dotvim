@@ -62,9 +62,6 @@ Bundle 'L9'
 Bundle 'Arduino-syntax-file'
 Bundle 'gtk-mode'
 Bundle 'AutoTag'
-" Non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-"
 
 filetype plugin indent on "required
 
