@@ -5,6 +5,7 @@ source  ~/.vim/bundles.vim
 
 set     encoding=utf-8
 
+set     shell=/bin/bash
 "       background:  Are we using a "light" or "dark" background?
 set     background=dark
 
