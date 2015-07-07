@@ -197,10 +197,6 @@ nmap    <leader>b :TagbarToggle<c-m>
 let     g:tagbar_autofocus = 1
 let     g:tagbar_autoclose = 1
 
-"       Use easymotion for search
-map  	/ <Plug>(easymotion-sn)
-omap 	/ <Plug>(easymotion-tn)
-
 "       Use powerline font in Airline
 let 	g:airline_powerline_fonts = 1
 let 	g:airline_theme = 'solarized'
