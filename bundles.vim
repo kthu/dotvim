@@ -48,6 +48,7 @@ Bundle 'vim-scripts/cup.vim'
 Bundle 'vim-scripts/fish.vim'
 Bundle 'jplaut/vim-arduino-ino'
 Bundle 'digitaltoad/vim-jade'  
+Bundle 'fsharp/vim-fsharp'
 
 " Color schemes
 Bundle 'altercation/vim-colors-solarized'
