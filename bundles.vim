@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
 " Original repos on github
 Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'amdt/vim-niji'
+Bundle 'luochen1990/rainbow'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'dgrnbrg/vim-redl'
 Bundle 'editorconfig/editorconfig-vim'
@@ -47,7 +47,7 @@ Bundle 'tpope/vim-vinegar'
 Bundle 'vim-scripts/cup.vim'
 Bundle 'vim-scripts/fish.vim'
 Bundle 'jplaut/vim-arduino-ino'
-Bundle 'digitaltoad/vim-jade'  
+Bundle 'digitaltoad/vim-jade'
 Bundle 'fsharp/vim-fsharp'
 
 " Color schemes
