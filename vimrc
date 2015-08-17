@@ -194,9 +194,10 @@ let     g:ctrlp_mruf_save_on_update = 0
 
 "       Rainbow parenthesis
 let     g:rainbow_active = 1
+" ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta']
 let     g:rainbow_conf = {
 \         'guifgs':   ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\         'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\         'ctermfgs': ['darkred', 'darkyellow', 'darkgreen', 'lightblue', 'lightcyan', 'lightmagenta'],
 \         'operators': '_,_',
 \         'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 \         'separately': {
