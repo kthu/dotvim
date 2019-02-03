@@ -7,7 +7,7 @@ set     encoding=utf-8
 
 set     shell=/bin/bash
 "       background:  Are we using a "light" or "dark" background?
-set     background=light
+set     background=dark
 
 "       autowrite: Automatically save modifications to files
 "       when you use critical (rxternal) commands.
@@ -68,7 +68,7 @@ if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
    set t_Co=256
 endif
 
-colorscheme solarized
+colorscheme nord
 
 "       switch syntax highlighting on, when the terminal has colors
 if      &t_Co > 2 || has("gui_running")
