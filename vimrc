@@ -6,8 +6,6 @@ source  ~/.vim/bundles.vim
 set     encoding=utf-8
 
 set     shell=/bin/bash
-"       background:  Are we using a "light" or "dark" background?
-set     background=dark
 
 "       autowrite: Automatically save modifications to files
 "       when you use critical (rxternal) commands.
@@ -67,8 +65,6 @@ set     nostartofline
 if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
    set t_Co=256
 endif
-
-colorscheme nord
 
 "       switch syntax highlighting on, when the terminal has colors
 if      &t_Co > 2 || has("gui_running")
@@ -224,6 +220,8 @@ let     g:tagbar_autoclose = 1
 
 "       Use powerline font in Airline
 let 	g:airline_powerline_fonts = 1
-let 	g:airline_theme = 'solarized'
 
 let     g:mustache_abbreviations = 1
+
+
+source  ~/.vim/theme.vim
