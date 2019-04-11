@@ -52,6 +52,7 @@ Bundle 'fsharp/vim-fsharp'
 " Color schemes
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'arcticicestudio/nord-vim'
+Bundle 'dracula/vim'
 Bundle 'sickill/vim-monokai'
 Bundle 'jnurmine/Zenburn'
 Bundle 'fmoralesc/vim-vitamins'
