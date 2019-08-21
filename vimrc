@@ -38,7 +38,7 @@ set     lazyredraw
 set     magic
 
 "       number:
-set     number
+set     number relativenumber
 
 "       report: show a report when N lines were changed.
 "               report=0 thus means "show all changes"!
