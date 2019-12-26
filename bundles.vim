@@ -9,7 +9,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Original repos on github
-Bundle 'bling/vim-airline'
+"Bundle 'bling/vim-airline'
+Bundle 'itchyny/lightline.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'luochen1990/rainbow'
 Bundle 'derekwyatt/vim-scala'
@@ -57,7 +58,8 @@ Bundle 'sickill/vim-monokai'
 Bundle 'jnurmine/Zenburn'
 Bundle 'fmoralesc/vim-vitamins'
 Bundle 'croaker/mustang-vim'
-Bundle 'vim-airline/vim-airline-themes'
+"Bundle 'vim-airline/vim-airline-themes'
+Bundle 'haishanh/night-owl.vim'
 
 " Vim-scripts repos
 Bundle 'javacomplete'

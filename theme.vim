@@ -1,3 +1,8 @@
 set     background=dark
-colorscheme dracula
-let 	g:airline_theme = 'dracula'
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+colorscheme night-owl
+let 	g:lightline = {'colorscheme': 'nightowl'}
