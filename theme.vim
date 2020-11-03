@@ -5,4 +5,4 @@ if (has("termguicolors"))
 endif
 
 colorscheme night-owl
-let 	g:lightline = {'colorscheme': 'nightowl'}
+let 	g:lightline = {'colorscheme':  'nightowl'}

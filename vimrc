@@ -62,7 +62,7 @@ set     suffixes=.aux,.bak,.dvi,.gz,.idx,.log,.ps,.swp,.tar
 set     nostartofline
 
 "      gnome-terminal hides the fact that it supports 256 colors.
-if $COLORTERM == 'gnome-terminal' || $TERM == 'screen'
+if $COLORTERM == 'gnome-terminal' || $TERM == 'screen' || $TERM == 'alacritty' || $TERM == 'screen-256color'
    set t_Co=256
 endif
 
