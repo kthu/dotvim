@@ -49,6 +49,7 @@ Bundle 'vim-scripts/fish.vim'
 Bundle 'jplaut/vim-arduino-ino'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'fsharp/vim-fsharp'
+Bundle 'christoomey/vim-titlecase'
 
 " Color schemes
 Bundle 'altercation/vim-colors-solarized'
